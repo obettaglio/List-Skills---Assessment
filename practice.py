@@ -89,15 +89,19 @@ def smallest_int(numbers):
         True
     """
 
-    test = 100                  #establish high ceiling
-    for i in numbers:
-        if i < test:
-            test = i
-    found_smallest_int = test   #test is complete
+    if not numbers:                 #test if list is empty
+        return None
+    else:
+        test = 100                  #establish high ceiling
+        for i in numbers:
+            if i < test:
+                test = i
+        found_smallest_int = test   #test is complete
     return found_smallest_int   #returned variable is clearly named
 
 smallest_int([-5, 2, -5, 7])
 smallest_int([3, 7, 2, 8, 4])
+smallest_int([]) is None
 
 
 def largest_int(numbers):
@@ -119,15 +123,19 @@ def largest_int(numbers):
         True
     """
 
-    test = 0                    #establish low floor
-    for i in numbers:
-        if i > test:
-            test = i
-    found_largest_int = test    #test is complete
-    return found_largest_int    #returned variable is clearly named
+    if not numbers:                 #test if list is empty
+        return None
+    else:
+        test = 0                    #establish low floor
+        for i in numbers:
+            if i > test:
+                test = i
+        found_largest_int = test    #test is complete
+    return found_largest_int        #returned variable is clearly named
 
 largest_int([-5, 2, -5, 7])
 largest_int([3, 7, 2, 8, 4])
+largest_int([]) is None
 
 
 def halvesies(numbers):
@@ -357,6 +365,7 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
+    #unsolved
 
     #doesn't mutate list in-place:
     #items = items[-1::-1]
@@ -397,7 +406,8 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
-    #unfinished
+    #unsolved
+
     return []
 
 duplicates(["apple", "banana", "banana", "cherry", "apple"])
@@ -435,7 +445,7 @@ def find_letter_indices(words, letter):
     `None`.)
     """
 
-    #unfinished
+    #unsolved
 
     indices_containing_letter = []
 

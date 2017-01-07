@@ -17,7 +17,14 @@ def all_odd(numbers):
         []
     """
 
-    return ['the wrong thing']
+    odd_list = []
+    for num in numbers:
+        if num % 2 != 0:    #test if num is odd
+            odd_list.append(int("{}".format(num)))
+    return odd_list
+
+all_odd([1, 2, 7, -5])
+all_odd([2, -6, 8])
 
 
 def print_indices(items):
@@ -45,8 +52,17 @@ def print_indices(items):
         3 Volvo
     
     """
+    i = 0
+    for item in items:
+        print "{} {}".format(
+            i, 
+            item
+            )
+        i = i + 1
+        #need new method to count^
 
-    print "Nothing at all"
+print_indices(["Toyota", "Jeep", "Volvo"])
+print_indices(["Toyota", "Jeep", "Toyota", "Volvo"])
 
 
 def foods_in_common(foods1, foods2):
@@ -77,9 +93,18 @@ def foods_in_common(foods1, foods2):
 
     """
 
-    return ['the wrong thing']
+    #sets can compare contents
 
-    #use list(set(foods1) && set(foods2))
+    foods1 = set(foods1)
+    foods2 = set(foods2)
+    common_foods_set = foods1 & foods2
+    common_foods_list = list(common_foods_set)
+    common_foods_list.sort()                    #returns nothing
+    return common_foods_list
+
+
+foods_in_common(["cheese", "bagel", "cake", "kale", "zebra cakes"], ["hummus", "cheese", "beets", "kale", "lentils", "bagel", "cake" ])
+foods_in_common(["lamb", "chili", "cheese"], ["cake", "ice cream"])
 
 
 def every_other_item(items):
@@ -96,7 +121,10 @@ def every_other_item(items):
        ['you', 'are', 'good', 'at', 'code']
     """
 
-    return ['the wrong thing']
+    return [item for item in items if items.index(item) % 2 == 0]
+
+every_other_item([1, 2, 3, 4, 5, 6])
+every_other_item(["you", "z", "are", "z", "good", "z", "at", "x", "code"])
 
 
 def largest_n_items(items, n):
@@ -122,6 +150,10 @@ def largest_n_items(items, n):
     """
 
     return []
+
+largest_n_items([2, 6006, 700, 42, 6, 59], 3)
+largest_n_items([3, 4, 5], 0)
+largest_n_items([3, 3, 3, 2, 1], 2)
 
 
 #####################################################################
