@@ -150,9 +150,12 @@ def largest_n_items(items, n):
         [3, 3]
     """
 
-    #unsolved
-
-    return []
+    items.sort()            #sort lowest to highest
+    if n > 0:
+        items = items[-n:]  #list = last n items
+    else:
+        items = []
+    return items
 
 largest_n_items([2, 6006, 700, 42, 6, 59], 3)
 largest_n_items([3, 4, 5], 0)
