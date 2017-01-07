@@ -365,10 +365,11 @@ def reverse_list_in_place(items):
         >>> orig
         ['I', 'love', 'cookies']
     """
-    #unsolved
 
     #doesn't mutate list in-place:
     #items = items[-1::-1]
+
+    items[:] = items[-1::-1]
     return
 
 orig = [1, 2, 3]
@@ -406,9 +407,19 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
-    #unsolved
+    single_list = []
+    duplicate_list = []
+    for item in items:
+        if item not in single_list:         #if item is unique
+            single_list.append(item)
+        else:
+            duplicate_list.append(item)
 
-    return []
+    duplicate_list = set(duplicate_list)    #remove excess duplicates, i.e. "4"
+    duplicate_list = list(duplicate_list)
+    duplicate_list.sort()                   #resort in ascending order
+
+    return duplicate_list
 
 duplicates(["apple", "banana", "banana", "cherry", "apple"])
 duplicates([1, 2, 2, 4, 4, 4, 7])
@@ -451,8 +462,9 @@ def find_letter_indices(words, letter):
 
     for word in words:
         if letter in word:
-            indices_containing_letter.append(words.index(word))
+            letter_index = word.index(letter)
             #need new method to find index^
+            indices_containing_letter.append(letter_index)
         else:
             indices_containing_letter.append(None)
 

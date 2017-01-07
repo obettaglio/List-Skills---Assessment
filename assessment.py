@@ -52,6 +52,9 @@ def print_indices(items):
         3 Volvo
     
     """
+    
+    #unsolved
+
     i = 0
     for item in items:
         print "{} {}".format(
@@ -93,13 +96,11 @@ def foods_in_common(foods1, foods2):
 
     """
 
-    #sets can compare contents
-
-    foods1 = set(foods1)
+    foods1 = set(foods1)            #sets can compare contents
     foods2 = set(foods2)
     common_foods_set = foods1 & foods2
     common_foods_list = list(common_foods_set)
-    common_foods_list.sort()                    #returns nothing
+    common_foods_list.sort()        #returns nothing
     return common_foods_list
 
 
@@ -148,6 +149,8 @@ def largest_n_items(items, n):
         >>> largest_n_items([3, 3, 3, 2, 1], 2)
         [3, 3]
     """
+
+    #unsolved
 
     return []
 
