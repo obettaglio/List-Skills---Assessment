@@ -53,7 +53,7 @@ def print_indices(items):
     
     """
     
-    #unsolved
+    #test passes but unsolved
 
     i = 0
     for item in items:

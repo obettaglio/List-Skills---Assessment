@@ -97,7 +97,7 @@ def smallest_int(numbers):
             if i < test:
                 test = i
         found_smallest_int = test   #test is complete
-    return found_smallest_int   #returned variable is clearly named
+    return found_smallest_int       #returned variable is clearly named
 
 smallest_int([-5, 2, -5, 7])
 smallest_int([3, 7, 2, 8, 4])
@@ -309,7 +309,6 @@ def join_strings_with_comma(words):
             custom_join_with_comma = custom_join_with_comma + ", {}".format(word)
     return custom_join_with_comma
 
-
 join_strings_with_comma(["Labrador", "Poodle", "French Bulldog"])
 join_strings_with_comma(["Pretzel"])
 
@@ -369,7 +368,7 @@ def reverse_list_in_place(items):
     #doesn't mutate list in-place:
     #items = items[-1::-1]
 
-    items[:] = items[-1::-1]
+    items[:] = items[-1::-1]    #assign slice mutates in-place
     return
 
 orig = [1, 2, 3]
@@ -410,7 +409,7 @@ def duplicates(items):
     single_list = []
     duplicate_list = []
     for item in items:
-        if item not in single_list:         #if item is unique
+        if item not in single_list:         #test if item is unique
             single_list.append(item)
         else:
             duplicate_list.append(item)
@@ -456,7 +455,7 @@ def find_letter_indices(words, letter):
     `None`.)
     """
 
-    #unsolved
+    #test passes but unsolved
 
     indices_containing_letter = []
 
