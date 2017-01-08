@@ -52,17 +52,18 @@ def print_indices(items):
         3 Volvo
     
     """
-    
-    #test passes but unsolved
 
-    i = 0
-    for item in items:
-        print "{} {}".format(
-            i, 
-            item
-            )
-        i = i + 1
-        #need new method to count^
+    for count, item in enumerate(items):
+        print count, item
+
+    # i = 0
+    # for item in items:
+    #     print "{} {}".format(
+    #         i, 
+    #         item
+    #         )
+    #     i = i + 1
+    #     (need new method to count^)
 
 print_indices(["Toyota", "Jeep", "Volvo"])
 print_indices(["Toyota", "Jeep", "Toyota", "Volvo"])
